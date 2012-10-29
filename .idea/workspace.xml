@@ -49,19 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+            <state line="7" column="1" selection-start="142" selection-end="142" vertical-scroll-proportion="0.027656477">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rpc_responses_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="rpc_responses_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/rpc_responses_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="50" selection-start="910" selection-end="910" vertical-scroll-proportion="0.16913946">
+            <state line="39" column="50" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,9 +82,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/rpc_responses_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -467,13 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="38" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
@@ -483,7 +476,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/rpc_responses_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="50" selection-start="910" selection-end="910" vertical-scroll-proportion="0.16913946">
+        <state line="39" column="50" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="1" selection-start="142" selection-end="142" vertical-scroll-proportion="0.027656477">
           <folding />
         </state>
       </provider>
