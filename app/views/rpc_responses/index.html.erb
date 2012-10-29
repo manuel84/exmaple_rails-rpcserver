@@ -1,0 +1,29 @@
+<h1>Listing rpc_responses</h1>
+
+<table>
+  <tr>
+    <th>Request</th>
+    <th>Methodname</th>
+    <th>Params</th>
+    <th>Response</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rpc_responses.each do |rpc_response| %>
+  <tr>
+    <td><%= rpc_response.request %></td>
+    <td><%= rpc_response.methodName %></td>
+    <td><%= rpc_response.params %></td>
+    <td><%= rpc_response.response %></td>
+    <td><%= link_to 'Show', rpc_response %></td>
+    <td><%= link_to 'Edit', edit_rpc_response_path(rpc_response) %></td>
+    <td><%= link_to 'Destroy', rpc_response, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rpc response', new_rpc_response_path %>

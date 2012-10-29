@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  request: MyText
+  methodName: MyString
+  params: MyText
+  response: MyText
+
+two:
+  request: MyText
+  methodName: MyString
+  params: MyText
+  response: MyText

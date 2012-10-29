@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Request:</b>
+  <%= @rpc_response.request %>
+</p>
+
+<p>
+  <b>Methodname:</b>
+  <%= @rpc_response.methodName %>
+</p>
+
+<p>
+  <b>Params:</b>
+  <%= @rpc_response.params %>
+</p>
+
+<p>
+  <b>Response:</b>
+  <%= @rpc_response.response %>
+</p>
+
+
+<%= link_to 'Edit', edit_rpc_response_path(@rpc_response) %> |
+<%= link_to 'Back', rpc_responses_path %>
