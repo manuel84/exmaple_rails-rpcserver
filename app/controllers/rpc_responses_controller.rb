@@ -1,4 +1,46 @@
 class RpcResponsesController < ApplicationController
+  exposes_xmlrpc_methods :method_prefix => "monitor."
+  
+  add_method 'system.listMethods' do
+    do_params
+    return '2'
+  end
+  
+  add_method 'system.methodHelp' do
+    do_params
+    return '2'
+  end
+  
+  add_method 'system.methodSignature' do
+    do_params
+    return '2'
+  end
+
+  add_method 'monitor.listActiveUsers' do
+    do_params
+    return '2'
+  end
+  
+  add_method 'monitor.checkActiveUser' do
+    do_params
+    return '2'
+  end
+
+  add_method 'monitor.getLoadAverages' do
+    do_params
+    return '2'
+  end
+
+  add_method 'monitor.getDiskSpace' do
+    do_params
+    return '2'
+  end
+
+  add_method 'monitor.getSelectedDiskSpace' do
+    do_params
+    return '2'
+  end
+   
   # GET /rpc_responses
   # GET /rpc_responses.json
   def index
@@ -21,67 +63,6 @@ class RpcResponsesController < ApplicationController
     end
   end
 
-  # GET /rpc_responses/new
-  # GET /rpc_responses/new.json
-  def new
-    @rpc_response = RpcResponse.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @rpc_response }
-    end
-  end
-
-  # GET /rpc_responses/1/edit
-  def edit
-    @rpc_response = RpcResponse.find(params[:id])
-  end
-
-  exposes_xmlrpc_methods :method_prefix => "sample."
-
-  add_method 'sample.sumAndDifference' do
-    params[:rpc_response] = {} unless params[:rpc_response]
-    params[:rpc_response][:methodName] = params[:methodCall][:methodName]
-    params[:rpc_response][:params] = params[:methodCall][:params][:param].collect { |p| p[:value][:string] }.join("||#||")
-    return '2'
-  end
-
-  # POST /rpc_responses
-  # POST /rpc_responses.json
-  def create
-    logger.debug params.inspect
-    params[:rpc_response] = {} unless params[:rpc_response]
-    params[:rpc_response][:methodName] = params[:methodCall][:methodName]
-    params[:rpc_response][:params] = params[:methodCall][:params][:param].collect { |p| p[:value][:string] }.join("||#||")
-    @rpc_response = RpcResponse.new(params[:rpc_response])
-
-    respond_to do |format|
-      if @rpc_response.save
-        format.html { redirect_to @rpc_response, :notice => 'Rpc response was successfully created.' }
-        format.json { render :json => @rpc_response, :status => :created, :location => @rpc_response }
-      else
-        format.html { render :action => "new" }
-        format.json { render :json => @rpc_response.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /rpc_responses/1
-  # PUT /rpc_responses/1.json
-  def update
-    @rpc_response = RpcResponse.find(params[:id])
-
-    respond_to do |format|
-      if @rpc_response.update_attributes(params[:rpc_response])
-        format.html { redirect_to @rpc_response, :notice => 'Rpc response was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render :action => "edit" }
-        format.json { render :json => @rpc_response.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
   # DELETE /rpc_responses/1
   # DELETE /rpc_responses/1.json
   def destroy
@@ -92,5 +73,13 @@ class RpcResponsesController < ApplicationController
       format.html { redirect_to rpc_responses_url }
       format.json { head :no_content }
     end
+  end
+  
+  protected
+  
+  def do_params
+    params[:rpc_response] = {} unless params[:rpc_response]
+    params[:rpc_response][:methodName] = params[:methodCall][:methodName]
+    params[:rpc_response][:params] = params[:methodCall][:params][:param].collect { |p| p[:value][:string] }.join("||#||")
   end
 end
