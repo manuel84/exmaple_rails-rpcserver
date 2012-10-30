@@ -17,12 +17,13 @@ class RpcResponsesController < ApplicationController
   end
 
   def listActiveUsers
-    do_params
+    #do_params
     2
   end
   
   def checkActiveUser(uString)
-    do_params
+    logger.debug uString
+    #do_params
     2
   end
 
@@ -78,6 +79,7 @@ class RpcResponsesController < ApplicationController
   protected
   
   def do_params
+     #{"methodCall"=>{"methodName"=>"monitor.checkActiveUser", "params"=>{"param"=>{"value"=>{"array"=>{"data"=>{"value"=>{"string"=>"3"}}}}}}}}
     params[:rpc_response] = {} unless params[:rpc_response]
     params[:rpc_response][:methodName] = params[:methodCall][:methodName]
     params[:rpc_response][:params] = params[:methodCall][:params][:param].collect { |p| p[:value][:string] }.join("||#||")
