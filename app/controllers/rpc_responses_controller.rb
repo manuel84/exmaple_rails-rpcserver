@@ -1,42 +1,42 @@
 class RpcResponsesController < ApplicationController
   exposes_xmlrpc_methods :method_prefix => "monitor."
   
-  def system.listMethods
+  def listMethods
     do_params
     2
   end
   
-  def system.methodHelp
+  def methodHelp(mString)
     do_params
     2
   end
   
-  def system.methodSignature
+  def methodSignature(mString)
     do_params
     2
   end
 
-   def monitor.listActiveUsers
+  def listActiveUsers
     do_params
     2
   end
   
-   def monitor.checkActiveUser
+  def checkActiveUser(String)
     do_params
     2
   end
 
-   def monitor.getLoadAverages
+  def getLoadAverages
     do_params
     2
   end
 
-   def monitor.getDiskSpace
+  def getDiskSpace
     do_params
     2
   end
 
-   def monitor.getSelectedDiskSpace
+  def getSelectedDiskSpace(uString)
     do_params
     2
   end
