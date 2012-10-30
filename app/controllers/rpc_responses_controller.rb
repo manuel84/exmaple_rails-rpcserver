@@ -22,7 +22,7 @@ class RpcResponsesController < ApplicationController
   end
   
   def checkActiveUser(uString)
-    logger.debug uString
+    logger.info uString
     #do_params
     2
   end
