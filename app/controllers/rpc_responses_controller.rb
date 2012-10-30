@@ -21,7 +21,7 @@ class RpcResponsesController < ApplicationController
     2
   end
   
-  def checkActiveUser(String)
+  def checkActiveUser(uString)
     do_params
     2
   end
